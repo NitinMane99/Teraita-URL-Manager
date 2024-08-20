@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="url"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="url"]:focus, input[type="password"]:focus {
+    border-color: #74ebd5;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #74ebd5;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ACB6E5;
+}
+
+.url-credentials-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.url-list, .credentials-list {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.url-item, .credential-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.url-item:hover, .credential-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.url-item a, .credential-item a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.url-item a:hover, .credential-item a:hover {
+    color: #0056b3;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7f50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff6347;
+}

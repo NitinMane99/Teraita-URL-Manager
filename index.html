@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Manager</title>
+    <link rel="stylesheet" href="styles.css">
+        
+</head>
+<body>
+    <h1>URL Manager</h1>
+    <div class="container">
+        <div class="section">
+            <h2>Add URL</h2>
+            <form id="urlForm">
+                <label for="urlTitle">Title:</label>
+                <input type="text" id="urlTitle" required>
+
+                <label for="urlLink">URL:</label>
+                <input type="url" id="urlLink" required>
+
+                <button type="submit">Add URL</button>
+            </form>
+        </div>
+        <div class="section">
+            <h2>Add Credential</h2>
+            <form id="credentialForm">
+                <label for="credUsername">Username:</label>
+                <input type="text" id="credUsername" required>
+
+                <label for="credPassword">Password:</label>
+                <input type="password" id="credPassword" required>
+
+                <label for="credUrl">URL:</label>
+                <input type="url" id="credUrl" >
+
+                <label for="credDescription">Description:</label>
+                <input type="text" id="credDescription">
+
+                <button type="submit">Add Credential</button>
+            </form>
+        </div>
+        <div class="section">
+            <div class="download-btn-container">
+                <button class="download-btn" id="downloadCsv">Download as CSV</button>
+                <button class="download-btn" id="downloadPdf">Download as PDF</button>
+            </div>
+            <div class="url-credentials-container">
+                <div class="url-list" id="urlList">
+                    <h3>My URLS</h3>
+                </div>
+                <div class="credentials-list" id="credentialsList">
+                   <h3>My Credentials</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="note">
+        <p>Note: The URLs and credentials you add are saved in your browser's localStorage. If you clear your browser's cache, all saved data will be deleted. Be sure to download your data as a CSV or PDF before clearing the cache.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
