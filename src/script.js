@@ -91,12 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.text("My URLs:", 10, 10);
 
         const urls = JSON.parse(localStorage.getItem('urls')) || [];
+        let y = 20;
         urls.forEach((url, index) => {
-            doc.setFontSize(14);
-            doc.text(`${index + 1}. ${url.title}`, 10, 20 + (index * 10));
             doc.setFontSize(12);
-            doc.text(`URL: ${url.link}`, 10, 25 + (index * 10));
-            doc.text(`Added on: ${url.time}`, 10, 30 + (index * 10));
+            doc.text(`${index + 1}. ${url.title}`, 10, y);
+            doc.text(`URL: ${url.link}`, 10, y + 10);
+            doc.text(`Added on: ${url.time}`, 10, y + 20);
+            y += 30;
         });
 
         doc.addPage();
@@ -104,18 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.text("My Credentials:", 10, 10);
 
         const credentials = JSON.parse(localStorage.getItem('credentials')) || [];
+        y = 20;
         credentials.forEach((cred, index) => {
-            doc.setFontSize(14);
-            doc.text(`${index + 1}. Username: ${cred.username}`, 10, 20 + (index * 30));
-            doc.text(`Password: ${cred.password}`, 10, 25 + (index * 30));
-            doc.text(`URL: ${cred.url}`, 10, 30 + (index * 30));
-            doc.text(`Description: ${cred.description || 'N/A'}`, 10, 35 + (index * 30));
-            doc.text(`Added on: ${cred.time}`, 10, 40 + (index * 30));
+            doc.setFontSize(12);
+            doc.text(`${index + 1}. Username: ${cred.username}`, 10, y);
+            doc.text(`Password: ${cred.password}`, 10, y + 10);
+            doc.text(`URL: ${cred.url}`, 10, y + 20);
+            doc.text(`Description: ${cred.description || 'N/A'}`, 10, y + 30);
+            doc.text(`Added on: ${cred.time}`, 10, y + 40);
+            y += 50;
         });
 
         doc.setFontSize(10);
-        doc.text("Developed by Teraita Inc", 10, doc.internal.pageSize.height - 10);
-        doc.text("https://teraita.vercel.app/", 10, doc.internal.pageSize.height - 3);
+        doc.text("Developed by Teraita Inc", 10, doc.internal.pageSize.height - 20);
+        doc.text("https://teraita.vercel.app/", 10, doc.internal.pageSize.height - 10);
 
         doc.save('data.pdf');
     }
@@ -136,8 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         credentials.forEach(cred => {
             csvData.push(['Credential', cred.username, cred.url, cred.password, cred.description || '']);
         });
-
-        
 
         const csv = Papa.unparse(csvData);
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
