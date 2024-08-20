@@ -1,3 +1,5 @@
+/* CSS */
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #74ebd5, #ACB6E5);
@@ -50,6 +52,7 @@ input[type="text"], input[type="url"], input[type="password"] {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 16px; /* Prevent zooming on mobile devices */
     transition: border-color 0.3s ease;
 }
 
@@ -180,6 +183,7 @@ button:hover {
     }
 
     input[type="text"], input[type="url"], input[type="password"] {
+        font-size: 16px; /* Consistent font size */
         padding: 8px;
     }
 
