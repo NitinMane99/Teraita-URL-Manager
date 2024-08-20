@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Manager</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>URL Manager - Teraita Inc</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content=" Teraita URL Manager by Teraita Inc - Efficiently manage your URLs and credentials with features to add, sort, and download your data as CSV or PDF files. Secure and user-friendly.">
+    
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="URL manager, credential manager, CSV download, PDF download, Teraita Inc, URL organizer, secure credentials">
+    
+    <!-- Author Meta Tag -->
+    <meta name="author" content="Teraita Inc">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="URL Manager - Teraita Inc">
+    <meta property="og:description" content="Manage your URLs and credentials with ease. Add, sort, and download your data securely with features for both CSV and PDF downloads.">
+    <meta property="og:image" content="URL_TO_YOUR_IMAGE"> <!-- Replace with actual URL to an image representing the page -->
+    <meta property="og:url" content="https://teraita.vercel.app/">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure to link your CSS file here -->
+    
         
 </head>
 <body>
@@ -15,10 +37,10 @@
             <form id="urlForm">
                 <label for="urlTitle">Title:</label>
                 <input type="text" id="urlTitle" required>
-
+    
                 <label for="urlLink">URL:</label>
                 <input type="url" id="urlLink" required>
-
+    
                 <button type="submit">Add URL</button>
             </form>
         </div>
@@ -27,16 +49,16 @@
             <form id="credentialForm">
                 <label for="credUsername">Username:</label>
                 <input type="text" id="credUsername" required>
-
+    
                 <label for="credPassword">Password:</label>
                 <input type="password" id="credPassword" required>
-
+    
                 <label for="credUrl">URL:</label>
-                <input type="url" id="credUrl" >
-
+                <input type="url" id="credUrl" required>
+    
                 <label for="credDescription">Description:</label>
                 <input type="text" id="credDescription">
-
+    
                 <button type="submit">Add Credential</button>
             </form>
         </div>
@@ -47,17 +69,18 @@
             </div>
             <div class="url-credentials-container">
                 <div class="url-list" id="urlList">
-                    <h3>My URLS</h3>
+                    <!-- URLs will be added here -->
                 </div>
                 <div class="credentials-list" id="credentialsList">
-                   <h3>My Credentials</h3>
+                    <!-- Credentials will be added here -->
                 </div>
             </div>
         </div>
+        <div class="note">
+            <p> <strong>Note:</strong> If you clear your browser's cache, all saved data will be deleted. Be sure to download your data as a CSV or PDF before clearing the cache.</p>
+        </div>
     </div>
-    <div class="note">
-        <p>Note: The URLs and credentials you add are saved in your browser's localStorage. If you clear your browser's cache, all saved data will be deleted. Be sure to download your data as a CSV or PDF before clearing the cache.</p>
-    </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
